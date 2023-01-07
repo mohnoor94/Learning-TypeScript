@@ -15,3 +15,30 @@ car3 = 'coupe';
 // car3 = 'not-valid'; // Error, because car4 is a CarType and not a string.
 
 console.log({ car1, car2, car3 });
+
+// ================================================================================================================
+
+// Type aliases can also be used to create complex types, or object types.
+
+type Car = {
+    brand: string;
+    model: string;
+    year: number;
+    type: CarType;
+};
+
+const car4: Car = {
+    brand: 'BMW',
+    model: 'M3',
+    year: 2019,
+    type: 'coupe'
+};
+
+const car5: Car = {
+    brand: 'Audi',
+    model: 'A4',
+    year: 2018,
+    type: 'sedan'
+};
+
+console.log({ car4, car5 });
